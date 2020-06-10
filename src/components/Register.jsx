@@ -18,24 +18,21 @@ class Register extends React.Component {
                     </Form.Group>
                 </Form.Row>
 
-                <Form.Group as={Col}>
-                    <Form.Label>Email</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" />
-                </Form.Group>
                 <Form.Row>
                     <Form.Group as={Col}>
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control type="password" placeholder="Password" />
+                        <Form.Label>Email</Form.Label>
+                        <Form.Control type="email" required placeholder="Enter email" />
                     </Form.Group>
+
                     <Form.Group as={Col}>
                         <Form.Label>Password</Form.Label>
-                        <Form.Control type="password" placeholder="Reapeat Password" />
+                        <Form.Control type="password" required pattern="[A-Za-z!]{8, }" placeholder="Password" />
                     </Form.Group>
                 </Form.Row>
 
                 <Form.Group as={Col}>
                     <Form.Label>Address</Form.Label>
-                    <Form.Control placeholder="1234 Main St" />
+                    <Form.Control required placeholder="1234 Main St" />
                 </Form.Group>
 
 
@@ -66,7 +63,7 @@ class Register extends React.Component {
 
                 <Button variant="primary" type="submit">
                     Submit
-                    </Button>
+                </Button>
             </Form>
         )
     }
